@@ -28,7 +28,7 @@ async function getDetectionsEntries(polyfillNames) {
 function getBundleCode(options)
 {
     const strDetectionEntries = options.detectionEntries.map(function(o) {
-        return '[' + JSON.stringify(o[0]) + ',' + o[1] + ']';
+        return '[' + JSON.stringify(o[0]) + ',' + o[1].replace('this', 'window') + ']';
     }).join(",\n");
     
     var code = fs.readFileSync(path.resolve(__dirname, 'bundle.js')).toString();
