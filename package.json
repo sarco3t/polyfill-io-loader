@@ -10,6 +10,6 @@
   "author": "Gary Green",
   "license": "ISC",
   "dependencies": {
-    "polyfill-library": "3.103.0"
+    "polyfill-library": "3.55.0"
   }
 }
